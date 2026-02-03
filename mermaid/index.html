@@ -314,7 +314,19 @@
 
 
 <h1 id="mermaid">mermaid記法メモ</h1>
-<p>ここはV字モデルのメモです。</p>
+<p>これはV字モデルのメモです。</p>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[要求分析] --&gt; B[基本設計]
+    B --&gt; C[詳細設計]
+    C --&gt; D[実装]
+    D --&gt; E[単体テスト]
+    E --&gt; F[結合テスト]
+    F --&gt; G[システムテスト]
+
+    A -.-&gt; G
+    B -.-&gt; F
+    C -.-&gt; E
+</code></pre></div>
 <pre class="mermaid"><code>graph TD
     A[要求分析] --&gt; B[基本設計]
     B --&gt; C[詳細設計]
